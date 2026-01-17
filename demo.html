@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SaveOnCare | Product Demo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec92",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d1b16] dark:text-white transition-colors duration-300">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">account_balance_wallet</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">SaveOnCare</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="process.html">Product</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="price.html">Pricing</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="vision.html">Vision</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="team.html">About Us</a>
+</nav>
+<div class="flex items-center gap-3">
+<button onclick="window.location.href='contact.html'" class="hidden sm:flex text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Contact</button>
+<button onclick="window.location.href='upload.html'" class="bg-primary text-background-dark text-sm font-bold px-5 py-2 rounded-lg hover:shadow-lg hover:shadow-primary/20 transition-all">
+                    Get Started
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-[1100px] mx-auto px-6 lg:px-10 py-16">
+<!-- Hero Header -->
+<div class="max-w-[800px] mx-auto text-center mb-12">
+<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">See SaveOnCare in Action</h1>
+<p class="text-lg text-[#0d1b16]/70 dark:text-white/70">
+                Discover how our AI-driven engine identifies overcharged medical bills in seconds and helps you reclaim your financial health.
+            </p>
+</div>
+<!-- Premium Video Container -->
+<div class="max-w-[1000px] mx-auto mb-20 px-6">
+    <div class="relative group aspect-video rounded-xl overflow-hidden shadow-2xl bg-[#0d1b16] border border-[#e7f3ee]/20">
+        
+        <video id="demoVideo" class="absolute inset-0 w-full h-full object-cover opacity-60 transition-opacity duration-500">
+            <source src="./Demo_vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div id="playBtnOverlay" class="absolute inset-0 flex items-center justify-center z-20">
+            <button onclick="playVideo()" class="group/btn relative size-20 md:size-24 flex items-center justify-center rounded-full bg-primary text-background-dark shadow-lg transition-transform hover:scale-110 active:scale-95">
+                <span class="material-symbols-outlined text-4xl md:text-5xl translate-x-1" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+                <span class="absolute inset-0 rounded-full bg-primary animate-ping opacity-20"></span>
+            </button>
+        </div>
+
+        <div class="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black/80 to-transparent z-10 pointer-events-none">
+            <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between text-white text-xs font-bold mb-1">
+                    <span id="currentTime">0:00</span>
+                    <span>2:23</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/20 rounded-full overflow-hidden">
+                    <div id="progressBarUI" class="h-full bg-primary w-[0%] rounded-full relative transition-all duration-300">
+                        <div class="absolute right-0 top-1/2 -translate-y-1/2 size-3 bg-white rounded-full shadow-md"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function playVideo() {
+    const video = document.getElementById('demoVideo');
+    const overlay = document.getElementById('playBtnOverlay');
+    const progressBar = document.getElementById('progressBarUI');
+    const timeDisplay = document.getElementById('currentTime');
+    
+    if (video.paused) {
+        video.play();
+        video.classList.remove('opacity-60');
+        video.classList.add('opacity-100');
+        overlay.classList.add('hidden'); // Hide button so we can see the vid
+        
+        // Bonus: Make that progress bar actually move!
+        video.ontimeupdate = function() {
+            let percentage = (video.currentTime / video.duration) * 100;
+            progressBar.style.width = percentage + '%';
+            
+            // Update time text
+            let mins = Math.floor(video.currentTime / 60);
+            let secs = Math.floor(video.currentTime % 60);
+            timeDisplay.innerText = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        };
+    }
+}
+
+// Allow clicking the video to pause/play again
+document.getElementById('demoVideo').addEventListener('click', function() {
+    const overlay = document.getElementById('playBtnOverlay');
+    if (!this.paused) {
+        this.pause();
+        overlay.classList.remove('hidden');
+    } else {
+        playVideo();
+    }
+});
+</script>
+
+<!-- Walkthrough Breakdown Section -->
+<div class="py-12 border-t border-[#e7f3ee] dark:border-[#1e3a2f]">
+<h2 class="text-3xl font-bold text-center mb-16">Platform Walkthrough</h2>
+<div class="grid md:grid-cols-3 gap-12">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">upload_file</span>
+</div>
+<h3 class="text-xl font-bold mb-3">1. Uploading</h3>
+<p class="text-[#0d1b16]/70 dark:text-white/70 leading-relaxed">
+                        Securely drag and drop your medical invoices. Our system supports PDFs, images, and digital statements with enterprise-grade encryption.
+                    </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">query_stats</span>
+</div>
+<h3 class="text-xl font-bold mb-3">2. Analysis</h3>
+<p class="text-[#0d1b16]/70 dark:text-white/70 leading-relaxed">
+                        Our AI cross-references 10,000+ billing codes and regional Fair Market Pricing to detect upcoding, unbundling, and duplicate charges.
+                    </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center">
+<div class="size-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">insights</span>
+</div>
+<h3 class="text-xl font-bold mb-3">3. Insights</h3>
+<p class="text-[#0d1b16]/70 dark:text-white/70 leading-relaxed">
+                        Receive a comprehensive savings report including specific negotiation scripts and direct links to contest overcharges.
+                    </p>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="mt-20 p-8 md:p-12 rounded-3xl bg-background-dark text-white text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 blur-[100px] -ml-32 -mb-32"></div>
+<div class="relative z-10">
+<h2 class="text-3xl font-bold mb-4">Ready to start saving?</h2>
+<p class="text-white/70 mb-8 max-w-[600px] mx-auto">Join over 50,000 users who have successfully reduced their medical debt using SaveOnCare.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button onclick="window.location.href='upload.html'" class="bg-primary text-background-dark px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform">
+                        Start Your Free Analysis
+                    </button>
+<button onclick="window.location.href='talk.html'" class="bg-white/10 hover:bg-white/20 border border-white/20 px-8 py-4 rounded-xl font-bold text-lg transition-all">
+                        Talk to an Expert
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-gray-200 dark:border-gray-800 py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-8">
+<div class="col-span-2 lg:col-span-2 space-y-6">
+<div class="flex items-center gap-2">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined text-xs font-bold">account_balance_wallet</span>
+</div>
+<h2 class="text-lg font-extrabold tracking-tight">SaveOnCare</h2>
+</div>
+<p class="text-sm text-gray-500 max-w-xs leading-relaxed">Making healthcare affordable through radical financial transparency and intelligent automation.</p>
+<div class="flex gap-4">
+  <a href="home.html" target="_blank" class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+    <span class="material-symbols-outlined text-sm">public</span>
+  </a>
+
+  <a href="contact.html" class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+    <span class="material-symbols-outlined text-sm">alternate_email</span>
+  </a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Product</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="process.html">Bill Auditing</a></li>
+<li><a class="hover:text-primary" href="price.html">Price Intelligence</a></li>
+<li><a class="hover:text-primary" href="talk.html">Negotiation Tools</a></li>
+<li><a class="hover:text-primary" href="demo.html">Demo Simulation</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Company</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="team.html">About Us</a></li>
+<li><a class="hover:text-primary" href="vision.html">Vision</a></li>
+<li><a class="hover:text-primary" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Legal</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="./Privacy Policy.pdf">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="./Terms and Condition.pdf">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="./act.pdf">DPDP Act 2023</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-xs text-gray-400 font-medium">© 2026 SaveOnCare Intelligence Platform. All rights reserved.</p>
+<p class="text-xs text-gray-400 font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[10px]">lock</span> Secured with AES-256 Encryption
+                </p>
+</div>
+</div>
+</footer>
+
+</body></html>

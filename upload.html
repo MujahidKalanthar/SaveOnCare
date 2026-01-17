@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Upload Medical Bill | SaveOnCare</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec92",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-[#0d1b16] dark:text-slate-100 transition-colors duration-300">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">account_balance_wallet</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">SaveOnCare</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="process.html">Product</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="price.html">Pricing</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="vision.html">Vision</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="team.html">About Us</a>
+</nav>
+<div class="flex items-center gap-3">
+<button onclick="window.location.href='contact.html'" class="hidden sm:flex text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Contact</button>
+<button onclick="window.location.href='upload.html'" class="bg-primary text-background-dark text-sm font-bold px-5 py-2 rounded-lg hover:shadow-lg hover:shadow-primary/20 transition-all">
+                    Get Started
+                </button>
+</div>
+</div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center justify-center px-6 py-12 lg:py-20">
+<div class="w-full max-w-[720px] flex flex-col items-center">
+<!-- Headline Section -->
+<div class="mb-10 text-center">
+<h1 class="text-[#0d1b16] dark:text-white tracking-tight text-4xl lg:text-[42px] font-extrabold leading-tight mb-4 font-display">
+                        Upload Your Medical Bill
+                    </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-lg mx-auto leading-relaxed">
+                        Let SaveOnCare analyze your expenses and compare them against national market benchmarks to find potential savings.
+                    </p>
+</div>
+<!-- Upload Card -->
+<input 
+  type="file" 
+  id="billInput"
+  accept=".pdf,.jpg,.jpeg,.png"
+  class="hidden"
+/>
+<div class="w-full bg-white dark:bg-slate-900 rounded-xl shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-800 p-8 lg:p-12 mb-8">
+<div class="flex flex-col items-center gap-8 rounded-xl border-2 border-dashed border-primary/40 dark:border-primary/20 bg-primary/5 dark:bg-primary/5 px-6 py-16 transition-all hover:border-primary/60 hover:bg-primary/10 group cursor-pointer">
+<div class="size-20 bg-primary rounded-full flex items-center justify-center text-black shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined !text-4xl">cloud_upload</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<p class="text-[#0d1b16] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] text-center">
+                                Drag &amp; drop files here or click to browse
+                            </p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium text-center">
+                                Supports PDF, JPG, PNG (Max 10MB)
+                            </p>
+</div>
+<button 
+  id="selectFileBtn"
+  class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white dark:bg-slate-800 text-[#0d1b16] dark:text-white text-sm font-bold border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-all">
+  <span class="truncate">Select File</span>
+</button>
+
+</div>
+<!-- Security Info -->
+<div class="flex items-center justify-center gap-6 mt-8">
+<div class="flex items-center gap-2 text-slate-400 text-xs font-semibold uppercase tracking-widest">
+<span class="material-symbols-outlined !text-lg text-primary">verified_user</span>
+<span>DPDP Act 2023 Compliant</span>
+</div>
+<div class="h-4 w-[1px] bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex items-center gap-2 text-slate-400 text-xs font-semibold uppercase tracking-widest">
+<span class="material-symbols-outlined !text-lg text-primary">lock</span>
+<span>AES-256 Encrypted</span>
+</div>
+</div>
+</div>
+<!-- Action Button -->
+<div class="w-full max-w-[320px] flex flex-col gap-4">
+<p id="fileName" class="hidden text-center text-primary font-bold mb-2">
+  Selected: <span></span>
+</p>
+<button onclick="window.location.href='analyse.html'" 
+  id="analyzeBtn"
+  disabled
+  class="w-full flex cursor-not-allowed items-center justify-center overflow-hidden rounded-xl h-14 px-8 bg-primary/40 text-[#0d1b16] text-lg font-bold shadow-lg transition-all">
+  <span class="truncate">Analyze Bill</span>
+</button>
+<p class="text-center text-slate-400 text-sm">
+                        By uploading, you agree to our <a class="text-primary hover:underline underline-offset-4" href="./Terms and Condition.pdf">Terms of Service</a>.
+                    </p>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="border-t border-gray-200 dark:border-gray-800 py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-8">
+<div class="col-span-2 lg:col-span-2 space-y-6">
+<div class="flex items-center gap-2">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined text-xs font-bold">account_balance_wallet</span>
+</div>
+<h2 class="text-lg font-extrabold tracking-tight">SaveOnCare</h2>
+</div>
+<p class="text-sm text-gray-500 max-w-xs leading-relaxed">Making healthcare affordable through radical financial transparency and intelligent automation.</p>
+<div class="flex gap-4">
+  <a href="home.html" target="_blank" class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+    <span class="material-symbols-outlined text-sm">public</span>
+  </a>
+
+  <a href="contact.html" class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+    <span class="material-symbols-outlined text-sm">alternate_email</span>
+  </a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Product</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="process.html">Bill Auditing</a></li>
+<li><a class="hover:text-primary" href="price.html">Price Intelligence</a></li>
+<li><a class="hover:text-primary" href="talk.html">Negotiation Tools</a></li>
+<li><a class="hover:text-primary" href="demo.html">Demo Simulation</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Company</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="team.html">About Us</a></li>
+<li><a class="hover:text-primary" href="vision.html">Vision</a></li>
+<li><a class="hover:text-primary" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Legal</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="./Privacy Policy.pdf">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="./Terms and Condition.pdf">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="./act.pdf">DPDP Act 2023</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-xs text-gray-400 font-medium">© 2026 SaveOnCare Intelligence Platform. All rights reserved.</p>
+<p class="text-xs text-gray-400 font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[10px]">lock</span> Secured with AES-256 Encryption
+                </p>
+</div>
+</div>
+</footer>
+</div>
+<script>
+  const billInput = document.getElementById("billInput");
+  const selectFileBtn = document.getElementById("selectFileBtn");
+  const analyzeBtn = document.getElementById("analyzeBtn");
+  const fileNameText = document.getElementById("fileName");
+  const fileNameSpan = fileNameText.querySelector("span");
+
+  selectFileBtn.addEventListener("click", () => {
+    billInput.click();
+  });
+
+  billInput.addEventListener("change", () => {
+    if (billInput.files.length > 0) {
+      fileNameSpan.textContent = billInput.files[0].name;
+      fileNameText.classList.remove("hidden");
+
+      analyzeBtn.disabled = false;
+      analyzeBtn.classList.remove("bg-primary/40", "cursor-not-allowed");
+      analyzeBtn.classList.add("bg-primary", "hover:-translate-y-0.5");
+    }
+  });
+</script>
+</body></html>

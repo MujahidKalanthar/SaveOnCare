@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SaveOnCare | Analyzing Your Bill</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec92",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom subtle shimmer for progress */
+        @keyframes progress-shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .shimmer {
+            background: linear-gradient(90deg, #13ec92 0%, #4c9a79 50%, #13ec92 100%);
+            background-size: 200% 100%;
+            animation: progress-shimmer 2s infinite linear;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d1b16] dark:text-white antialiased">
+<!-- Main Dashboard Background (Blurred for Modal Focus) -->
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden filter blur-sm grayscale-[20%] pointer-events-none">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header Component -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7f3ee] dark:border-b-white/10 px-10 py-3 bg-white dark:bg-background-dark/50">
+<div class="flex items-center gap-4 text-[#0d1b16] dark:text-primary">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_535)">
+<path clip-rule="evenodd" d="M47.2426 24L24 47.2426L0.757355 24L24 0.757355L47.2426 24ZM12.2426 21H35.7574L24 9.24264L12.2426 21Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs><clippath id="clip0_6_535"><rect fill="white" height="48" width="48"></rect></clippath></defs>
+</svg>
+</div>
+<h2 class="text-[#0d1b16] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">SaveOnCare</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#0d1b16] dark:text-white/70 text-sm font-medium leading-normal" href="#">About Us</a>
+<a class="text-[#0d1b16] dark:text-white/70 text-sm font-medium leading-normal" href="#">Our Aim</a>
+<a class="text-[#0d1b16] dark:text-white/70 text-sm font-medium leading-normal" href="#">Insights</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="User profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARR1cPY7DVexWEEt9ywwHLghz6Aa055L0yfMxt33KLDCSt8e4H_fDYbQco-1icLV_8BB3IfKo-cajHSvMXyxshUGerKj6zf4-TApnlG9ZmO2d9nCU-IZAc6UBCxxLaK6hwFs9_zD4XeZi68O1fNaVzHQprQjLeSEHJ5zlhNF8179d9qZX4d4ZDx03VrT40C0JyykkTgedUgzW0_aHK6yBZn7klsaGDHimNCeRR9WdnsJF7tlQ0RD_bepwv1SWxPOsLszQBVply4H4");'></div>
+</div>
+</header>
+<main class="px-10 py-8 grid grid-cols-12 gap-6 max-w-[1440px] mx-auto w-full">
+<!-- Sidebar Simulation -->
+<div class="col-span-3 flex flex-col gap-4">
+<div class="flex flex-col gap-2 p-4 bg-white dark:bg-white/5 rounded-xl">
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#e7f3ee] dark:bg-primary/20">
+<span class="material-symbols-outlined text-primary fill-icon">dashboard</span>
+<p class="text-[#0d1b16] dark:text-white text-sm font-semibold">Overview</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 opacity-50">
+<span class="material-symbols-outlined">receipt_long</span>
+<p class="text-sm font-medium">My Bills</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 opacity-50">
+<span class="material-symbols-outlined">analytics</span>
+<p class="text-sm font-medium">Cost Comparison</p>
+</div>
+</div>
+</div>
+<!-- Content Area Simulation -->
+<div class="col-span-9 space-y-6">
+<div class="h-32 bg-white dark:bg-white/5 rounded-xl border border-dashed border-primary/30 flex items-center justify-center">
+<p class="text-slate-400">Previous Bill Records</p>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="h-64 bg-white dark:bg-white/5 rounded-xl shadow-sm"></div>
+<div class="h-64 bg-white dark:bg-white/5 rounded-xl shadow-sm"></div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<!-- Loading Overlay Layer -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-background-dark/40 backdrop-blur-[2px]">
+<div class="w-full max-w-[600px] bg-white dark:bg-background-dark border border-[#e7f3ee] dark:border-white/10 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden m-4">
+<!-- Analysis Header -->
+<div class="pt-8 pb-4 px-8 text-center">
+<div class="inline-flex items-center justify-center size-12 rounded-full bg-primary/10 text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">clinical_notes</span>
+</div>
+<h1 class="text-[#0d1b16] dark:text-white tracking-tight text-[28px] font-bold leading-tight">Analyzing Your Medical Bill</h1>
+<p class="text-[#4c9a79] dark:text-primary/80 text-base font-normal leading-normal pt-2">Our AI is auditing your expenses for potential savings.</p>
+</div>
+<!-- Progress Bar Section -->
+<div class="px-8 py-6 bg-background-light dark:bg-white/5">
+    <div class="flex flex-col gap-3">
+        <div class="flex gap-6 justify-between items-center">
+            <p class="text-[#0d1b16] dark:text-white text-sm font-bold uppercase tracking-wider">Overall Analysis Progress</p>
+            <p id="progressText" class="text-primary text-lg font-extrabold leading-normal">0%</p>
+        </div>
+        <div class="h-3 w-full rounded-full bg-[#cfe7dd] dark:bg-white/10 overflow-hidden">
+            <div id="progressBar" class="h-full rounded-full shimmer transition-all duration-500" style="width: 0%;"></div>
+        </div>
+        <p id="statusSubtext" class="text-[#4c9a79] dark:text-primary/60 text-xs font-medium uppercase tracking-tight">Initializing AI Audit...</p>
+    </div>
+</div>
+
+<div class="p-8 space-y-6">
+    <div id="step1" class="flex items-center gap-4 opacity-40 transition-opacity duration-500">
+        <div class="icon-container flex items-center justify-center size-8 rounded-full bg-slate-200 text-slate-500"><span class="material-symbols-outlined text-xl">check</span></div>
+        <div class="flex flex-col"><p class="text-base font-semibold">Extracting bill details</p></div>
+    </div>
+    <div id="step2" class="flex items-center gap-4 opacity-40 transition-opacity duration-500">
+        <div class="icon-container flex items-center justify-center size-8 rounded-full bg-slate-200 text-slate-500"><span class="material-symbols-outlined text-xl">search</span></div>
+        <div class="flex flex-col"><p class="text-base font-semibold">Identifying procedures</p></div>
+    </div>
+    <div id="step3" class="flex items-center gap-4 opacity-40 transition-opacity duration-500">
+        <div class="icon-container flex items-center justify-center size-8 rounded-full bg-slate-200 text-slate-500"><span class="material-symbols-outlined text-xl">account_balance_wallet</span></div>
+        <div class="flex flex-col"><p class="text-base font-semibold">Comparing costs</p></div>
+    </div>
+    <div id="step4" class="flex items-center gap-4 opacity-40 transition-opacity duration-500">
+        <div class="icon-container flex items-center justify-center size-8 rounded-full bg-slate-200 text-slate-500"><span class="material-symbols-outlined text-xl">lightbulb</span></div>
+        <div class="flex flex-col"><p class="text-base font-semibold">Generating insights</p></div>
+    </div>
+</div>
+
+<div id="resultAction" class="px-8 pb-8 hidden">
+    <button onclick="window.location.href='result.html'" class="w-full bg-primary text-black font-bold py-4 rounded-xl shadow-lg hover:scale-[1.02] transition-transform">
+        View Analysis Results
+    </button>
+</div>
+<!-- Footer Engagement -->
+<div class="mx-8 mb-8 p-4 bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/20 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">info</span>
+<p class="text-[#0d1b16] dark:text-white/80 text-sm leading-relaxed">
+<span class="font-bold">Did you know?</span> 80% of medical bills contain errors. We’re cross-referencing your codes with the latest CPT database to find hidden savings.
+                </p>
+</div>
+</div>
+</div>
+<script>
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+    const statusSubtext = document.getElementById('statusSubtext');
+    const resultAction = document.getElementById('resultAction');
+
+    const steps = [
+        { id: 'step1', time: 1000, text: 'Step 1 of 4: Extracting details...', percent: 25 },
+        { id: 'step2', time: 3000, text: 'Step 2 of 4: Identifying procedures...', percent: 50 },
+        { id: 'step3', time: 5500, text: 'Step 3 of 4: Comparing market rates...', percent: 75 },
+        { id: 'step4', time: 7500, text: 'Step 4 of 4: Finalizing insights...', percent: 100 }
+    ];
+
+    function activateStep(stepId) {
+        const el = document.getElementById(stepId);
+        el.classList.remove('opacity-40');
+        const iconBox = el.querySelector('.icon-container');
+        iconBox.classList.remove('bg-slate-200', 'text-slate-500');
+        iconBox.classList.add('bg-primary', 'text-black');
+        // Change icon to checkmark if you want
+        iconBox.innerHTML = '<span class="material-symbols-outlined text-xl">check</span>';
+    }
+
+    // Start the animation
+    steps.forEach((step, index) => {
+        setTimeout(() => {
+            activateStep(step.id);
+            progressBar.style.width = step.percent + '%';
+            progressText.innerText = step.percent + '%';
+            statusSubtext.innerText = step.text;
+
+            // Final Finish
+            if (index === steps.length - 1) {
+                setTimeout(() => {
+                    statusSubtext.innerText = "Analysis Complete!";
+                    resultAction.classList.remove('hidden');
+                    // Add a little pop effect
+                    resultAction.classList.add('animate-bounce');
+                    setTimeout(() => resultAction.classList.remove('animate-bounce'), 1000);
+                }, 800);
+            }
+        }, step.time);
+    });
+</script>
+</body></html>

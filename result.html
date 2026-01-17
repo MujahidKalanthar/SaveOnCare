@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bill Analysis Results | SaveOnCare</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec92",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                        "error-red": "#e72a08",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .gauge-conic {
+            background: conic-gradient(#e72a08 0% 25%, #f6f8f7 25% 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d1b16] font-display min-h-screen">
+<div class="layout-container flex flex-col min-h-screen">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">account_balance_wallet</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">SaveOnCare</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="process.html">Product</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="price.html">Pricing</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="vision.html">Vision</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="team.html">About Us</a>
+</nav>
+<div class="flex items-center gap-3">
+<button onclick="window.location.href='contact.html'" class="hidden sm:flex text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Contact</button>
+<button onclick="window.location.href='upload.html'" class="bg-primary text-background-dark text-sm font-bold px-5 py-2 rounded-lg hover:shadow-lg hover:shadow-primary/20 transition-all">
+                    Get Started
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-[1100px] mx-auto px-6 lg:px-10 py-16">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 mb-4">
+<a class="text-[#4c9a79] text-sm font-medium flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">analytics</span> Analysis
+                </a>
+<span class="text-[#4c9a79] text-sm font-medium">/</span>
+<span class="text-[#0d1b16] dark:text-gray-200 text-sm font-medium">MRI Scan (Lumbar)</span>
+</div>
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-8">
+<div class="flex flex-col gap-1">
+<h1 class="text-[#0d1b16] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Bill Analysis Report</h1>
+<p class="text-[#4c9a79] text-base font-medium">Analysis ID: <span class="text-[#0d1b16] dark:text-white font-bold">SOC-88291</span> | Oct 24, 2023</p>
+</div>
+<div class="flex items-center gap-2 bg-[#e7f3ee] dark:bg-gray-800 px-4 py-2 rounded-lg border border-[#cfe7dd]">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="text-sm font-bold dark:text-white">Audit Verified</span>
+</div>
+</div>
+<!-- High-Level Stats -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-gray-900 border border-[#cfe7dd] dark:border-gray-800 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-[#0d1b16] dark:text-gray-400 text-sm font-semibold uppercase tracking-wider">Amount Charged</p>
+<span class="material-symbols-outlined text-error-red">trending_up</span>
+</div>
+<p class="text-[#0d1b16] dark:text-white tracking-tight text-4xl font-black leading-tight">₹26,690</p>
+<p class="text-error-red text-sm font-bold flex items-center gap-1">
+                        +100% vs Market Average
+                    </p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-gray-900 border border-[#cfe7dd] dark:border-gray-800 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-[#0d1b16] dark:text-gray-400 text-sm font-semibold uppercase tracking-wider">Market Average</p>
+<span class="material-symbols-outlined text-[#4c9a79]">info</span>
+</div>
+<p class="text-[#0d1b16] dark:text-white tracking-tight text-4xl font-black leading-tight">₹20,000</p>
+<p class="text-gray-500 text-sm font-medium italic">Regional benchmark (Tier 1)</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-primary/10 dark:bg-primary/5 border border-primary/30 shadow-sm">
+<div class="flex justify-between items-start">
+<p class="text-[#0d1b16] dark:text-gray-400 text-sm font-semibold uppercase tracking-wider">Potential Savings</p>
+<span class="material-symbols-outlined text-primary">savings</span>
+</div>
+<p class="text-[#0d1b16] dark:text-white tracking-tight text-4xl font-black leading-tight">₹6,690</p>
+<p class="text-primary font-bold text-sm">Negotiation potential high</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Content (Left Col) -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Billing Fairness Score Module -->
+<div class="bg-white dark:bg-gray-900 rounded-xl p-8 border border-[#cfe7dd] dark:border-gray-800 shadow-sm text-center flex flex-col items-center">
+<h2 class="text-xl font-bold mb-6 self-start">Billing Fairness Score</h2>
+<div class="relative flex items-center justify-center w-64 h-64">
+<!-- Circular Gauge Placeholder -->
+<div class="absolute inset-0 rounded-full gauge-conic opacity-20"></div>
+<div class="absolute inset-4 rounded-full bg-white dark:bg-gray-900 border-8 border-gray-100 dark:border-gray-800"></div>
+<div class="relative z-10 flex flex-col items-center">
+<span class="text-6xl font-black text-error-red">35</span>
+<span class="text-gray-400 font-bold">/ 100</span>
+</div>
+</div>
+<div class="mt-6 flex flex-col items-center gap-2">
+<span class="bg-error-red/10 text-error-red px-6 py-2 rounded-full font-black text-lg">HIGHLY OVERPRICED</span>
+<p class="text-gray-500 max-w-md mt-2">
+                                Your bill is significantly higher than 92% of similar procedures performed in your region. We've detected multiple areas for potential cost reduction.
+                            </p>
+</div>
+</div>
+<!-- Detailed Breakdown -->
+<div class="bg-white dark:bg-gray-900 rounded-xl border border-[#cfe7dd] dark:border-gray-800 overflow-hidden">
+<div class="px-6 py-4 border-b border-[#cfe7dd] dark:border-gray-800 flex justify-between items-center">
+<h3 class="font-bold">Detected Line Items</h3>
+<span class="text-sm font-medium text-gray-400">3 Items found</span>
+</div>
+<div class="p-0">
+<table class="w-full text-left">
+<thead class="bg-background-light dark:bg-gray-800/50">
+<tr class="text-xs uppercase text-gray-500 font-bold">
+<th class="px-6 py-3">Service Code</th>
+<th class="px-6 py-3">Description</th>
+<th class="px-6 py-3 text-right">Charge</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+<tr class="text-sm">
+<td class="px-6 py-4 font-mono font-bold">72148</td>
+<td class="px-6 py-4">Nursing Care & Room
+Utilities
+</td>
+<td class="px-6 py-4 text-right font-bold">₹9,000</td>
+</tr>
+<tr class="text-sm">
+<td class="px-6 py-4 font-mono font-bold">A4550</td>
+<td class="px-6 py-4">Dengue NS1 Antigen</td>
+<td class="px-6 py-4 text-right font-bold">₹600</td>
+</tr>
+<tr class="text-sm">
+<td class="px-6 py-4 font-mono font-bold">99214</td>
+<td class="px-6 py-4">Doctor Consultation &
+RMO Visits</td>
+<td class="px-6 py-4 text-right font-bold">₹4,800</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Sidebar (Right Col) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-white dark:bg-gray-900 rounded-xl p-6 border border-[#cfe7dd] dark:border-gray-800 shadow-sm">
+<h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bolt</span> Suggested Actions
+                        </h3>
+<div class="flex flex-col gap-3">
+<button onclick="window.location.href='itemized_bill.pdf'" class="group flex items-center justify-between p-4 bg-background-light dark:bg-gray-800 hover:bg-primary/10 rounded-lg transition-all border border-transparent hover:border-primary/50 text-left">
+<div class="flex flex-col">
+<span class="font-bold text-sm">Request Itemized Bill</span>
+<span class="text-xs text-gray-500">Essential to identify billing errors</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button onclick="window.location.href='CPT_Format.pdf'" class="group flex items-center justify-between p-4 bg-background-light dark:bg-gray-800 hover:bg-primary/10 rounded-lg transition-all border border-transparent hover:border-primary/50 text-left">
+<div class="flex flex-col">
+<span class="font-bold text-sm">Ask for CPT Breakdown</span>
+<span class="text-xs text-gray-500">Verify specific procedure codes</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button onclick="window.location.href='Negotiator_Letter.pdf'" class="group flex items-center justify-between p-4 bg-background-light dark:bg-gray-800 hover:bg-primary/10 rounded-lg transition-all border border-transparent hover:border-primary/50 text-left">
+<div class="flex flex-col">
+<span class="font-bold text-sm">Generate Negotiation Letter</span>
+<span class="text-xs text-gray-500">Auto-generated with market data</span>
+</div>
+<span class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="bg-primary p-6 rounded-xl shadow-lg shadow-primary/20">
+<h4 class="font-black text-background-dark text-xl mb-2">Need expert help?</h4>
+<p class="text-background-dark/80 text-sm mb-4">Our bill negotiators can talk to your hospital and reduce your bill for a small performance fee.</p>
+<button onclick="window.location.href='contact.html'" class="w-full bg-background-dark text-primary font-bold py-3 rounded-lg hover:opacity-90 transition-opacity">Contact Advisor</button>
+</div>
+<!-- Helpful context -->
+<div class="bg-[#f0f9f6] dark:bg-gray-800/40 p-5 rounded-xl border border-dashed border-[#4c9a79]/30">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-[#4c9a79]">lightbulb</span>
+<div class="flex flex-col">
+<span class="font-bold text-sm text-[#0d1b16] dark:text-white">Did you know?</span>
+<p class="text-xs text-[#4c9a79] mt-1">Up to 80% of hospital bills contain errors. Requesting an itemized bill often leads to "accidental" charges being removed immediately.</p>
+</div>
+</div>
+</div>
+<div class="mt-6 bg-background-dark border border-primary/20 p-6 rounded-xl shadow-xl shadow-black/20">
+    <div class="flex items-center gap-3 mb-3">
+        <div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined font-bold">description</span>
+        </div>
+        <h4 class="font-black text-white text-xl">Analysis Report</h4>
+    </div>
+    <p class="text-slate-400 text-sm mb-4">Get a detailed PDF breakdown of your savings, billing errors, and market benchmarks.</p>
+    
+    <a href="Bill_Analysis_Report.pdf" download="Bill_Analysis_Report.pdf" class="w-full inline-flex items-center justify-center gap-2 bg-primary text-background-dark font-bold py-3 rounded-lg hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/10">
+        <span class="material-symbols-outlined">download</span>
+        Download PDF Report
+    </a>
+</div>
+</div>
+</div>
+<!-- Disclaimer Footer -->
+<footer class="border-t border-gray-200 dark:border-gray-800 py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-8">
+<div class="col-span-2 lg:col-span-2 space-y-6">
+<div class="flex items-center gap-2">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined text-xs font-bold">account_balance_wallet</span>
+</div>
+<h2 class="text-lg font-extrabold tracking-tight">SaveOnCare</h2>
+</div>
+<p class="text-sm text-gray-500 max-w-xs leading-relaxed">Making healthcare affordable through radical financial transparency and intelligent automation.</p>
+<div class="flex gap-4">
+  <a href="home.html" target="_blank" class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+    <span class="material-symbols-outlined text-sm">public</span>
+  </a>
+
+  <a href="contact.html" class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+    <span class="material-symbols-outlined text-sm">alternate_email</span>
+  </a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Product</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="process.html">Bill Auditing</a></li>
+<li><a class="hover:text-primary" href="price.html">Price Intelligence</a></li>
+<li><a class="hover:text-primary" href="talk.html">Negotiation Tools</a></li>
+<li><a class="hover:text-primary" href="demo.html">Demo Simulation</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Company</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="team.html">About Us</a></li>
+<li><a class="hover:text-primary" href="vision.html">Vision</a></li>
+<li><a class="hover:text-primary" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Legal</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="./Privacy Policy.pdf">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="./Terms and Condition.pdf">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="./act.pdf">DPDP Act 2023</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-xs text-gray-400 font-medium">© 2026 SaveOnCare Intelligence Platform. All rights reserved.</p>
+<p class="text-xs text-gray-400 font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[10px]">lock</span> Secured with AES-256 Encryption
+                </p>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

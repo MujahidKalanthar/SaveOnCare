@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How SaveOnCare Works | Expense Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13ec92",
+            "background-light": "#f6f8f7",
+            "background-dark": "#10221a",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#0d1b16] dark:text-white transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined font-bold">account_balance_wallet</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">SaveOnCare</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="process.html">Product</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="price.html">Pricing</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="vision.html">Vision</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="team.html">About Us</a>
+</nav>
+<div class="flex items-center gap-3">
+<button onclick="window.location.href='contact.html'" class="hidden sm:flex text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">Contact</button>
+<button onclick="window.location.href='upload.html'" class="bg-primary text-background-dark text-sm font-bold px-5 py-2 rounded-lg hover:shadow-lg hover:shadow-primary/20 transition-all">
+                    Get Started
+                </button>
+</div>
+</div>
+</header>
+<main class="max-w-[1100px] mx-auto px-6 lg:px-10 py-16">
+<!-- Hero Section -->
+<div class="mb-20">
+<div class="relative overflow-hidden rounded-xl bg-[#0d1b16] p-8 md:p-20 text-center shadow-2xl">
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 20% 50%, #13ec92 0%, transparent 40%), radial-gradient(circle at 80% 80%, #13ec92 0%, transparent 40%);">
+</div>
+<div class="relative z-10 flex flex-col items-center gap-6">
+<span class="px-4 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest border border-primary/20">
+            Transparency First
+          </span>
+<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight max-w-3xl">
+            Financial Intelligence for Your Medical Bills
+          </h1>
+<p class="text-white/70 text-base md:text-xl font-normal max-w-2xl leading-relaxed">
+            Our premium expense intelligence platform analyzes your invoices in five simple steps to ensure fairness, transparency, and accuracy.
+          </p>
+<div class="mt-4">
+<button onclick="window.location.href='upload.html'" class="flex items-center gap-2 cursor-pointer rounded-lg h-12 md:h-14 px-8 bg-primary text-[#0d1b16] text-base font-bold shadow-lg transition-all hover:translate-y-[-2px]">
+              Analyze Your First Bill
+              <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section Header -->
+<div class="flex flex-col items-center mb-12">
+<h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center">The 5-Step Intelligence Process</h2>
+<div class="w-20 h-1.5 bg-primary mt-4 rounded-full"></div>
+</div>
+<!-- Timeline / Process Flow -->
+<div class="max-w-[900px] mx-auto mb-24">
+<div class="grid grid-cols-[60px_1fr] gap-x-6">
+<!-- Step 1 -->
+<div class="flex flex-col items-center">
+<div class="flex size-12 items-center justify-center rounded-full bg-primary text-[#0d1b16] shadow-md ring-8 ring-background-light dark:ring-background-dark z-10">
+<span class="material-symbols-outlined font-bold">upload_file</span>
+</div>
+<div class="w-[2px] bg-primary/20 h-full grow"></div>
+</div>
+<div class="flex flex-col pb-16 pt-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-primary font-bold text-lg">01</span>
+<h3 class="text-xl font-bold">Upload Bill</h3>
+</div>
+<p class="text-[#4c9a79] dark:text-gray-400 text-lg leading-relaxed bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm transition-hover hover:shadow-md">
+            Securely upload PDFs or clear images of your medical invoices. Our DPDP '23 Act - compliant gateway ensures your sensitive health information is encrypted and protected from the moment of transit.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center">
+<div class="flex size-12 items-center justify-center rounded-full bg-primary text-[#0d1b16] shadow-md ring-8 ring-background-light dark:ring-background-dark z-10">
+<span class="material-symbols-outlined font-bold">data_object</span>
+</div>
+<div class="w-[2px] bg-primary/20 h-full grow"></div>
+</div>
+<div class="flex flex-col pb-16 pt-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-primary font-bold text-lg">02</span>
+<h3 class="text-xl font-bold">Identify Charges</h3>
+</div>
+<p class="text-[#4c9a79] dark:text-gray-400 text-lg leading-relaxed bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm transition-hover hover:shadow-md">
+            Our specialized AI engine performs deep OCR to extract CPT codes, HCPCS codes, and itemized line items. We decode complex medical jargon into plain English so you know exactly what you're being charged for.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center">
+<div class="flex size-12 items-center justify-center rounded-full bg-primary text-[#0d1b16] shadow-md ring-8 ring-background-light dark:ring-background-dark z-10">
+<span class="material-symbols-outlined font-bold">query_stats</span>
+</div>
+<div class="w-[2px] bg-primary/20 h-full grow"></div>
+</div>
+<div class="flex flex-col pb-16 pt-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-primary font-bold text-lg">03</span>
+<h3 class="text-xl font-bold">Market Benchmark</h3>
+</div>
+<p class="text-[#4c9a79] dark:text-gray-400 text-lg leading-relaxed bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm transition-hover hover:shadow-md">
+            We cross-reference your bill against a proprietary database of millions of anonymized regional and national data points. See how your provider's rates compare to Fair Market Values in your specific zip code.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center">
+<div class="flex size-12 items-center justify-center rounded-full bg-primary text-[#0d1b16] shadow-md ring-8 ring-background-light dark:ring-background-dark z-10">
+<span class="material-symbols-outlined font-bold">verified</span>
+</div>
+<div class="w-[2px] bg-primary/20 h-full grow"></div>
+</div>
+<div class="flex flex-col pb-16 pt-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-primary font-bold text-lg">04</span>
+<h3 class="text-xl font-bold">Fairness Score</h3>
+</div>
+<p class="text-[#4c9a79] dark:text-gray-400 text-lg leading-relaxed bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm transition-hover hover:shadow-md">
+            Receive an instant 1-100 proprietary rating on your billing accuracy and price competitiveness. A lower score indicates significant potential for overbilling or errors that require immediate attention.
+          </p>
+</div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center">
+<div class="flex size-12 items-center justify-center rounded-full bg-primary text-[#0d1b16] shadow-md ring-8 ring-background-light dark:ring-background-dark z-10">
+<span class="material-symbols-outlined font-bold">lightbulb</span>
+</div>
+</div>
+<div class="flex flex-col pt-2">
+<div class="flex items-center gap-3 mb-2">
+<span class="text-primary font-bold text-lg">05</span>
+<h3 class="text-xl font-bold">Actionable Insights</h3>
+</div>
+<p class="text-[#4c9a79] dark:text-gray-400 text-lg leading-relaxed bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm transition-hover hover:shadow-md">
+            Get a personalized roadmap for resolution. We provide specific negotiation scripts, identify "upcoding" errors, and give you the exact steps needed to correct billing mistakes or lower your total out-of-pocket costs.
+          </p>
+</div>
+</div>
+</div>
+<!-- Action Panel / Disclaimer -->
+<div class="max-w-[960px] mx-auto mt-12">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 rounded-2xl border-2 border-dashed border-[#cfe7dd] dark:border-[#1e3a2f] bg-white/50 dark:bg-white/5 p-8 transition-all hover:bg-white dark:hover:bg-white/10">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#0d1b16] dark:text-white">info</span>
+<p class="text-[#0d1b16] dark:text-white text-lg font-bold">Medical Disclaimer</p>
+</div>
+<p class="text-[#4c9a79] dark:text-gray-400 text-base font-normal leading-normal max-w-xl">
+            SaveOnCare provides financial intelligence and billing analysis. We do not provide medical advice, diagnosis, or treatment recommendations. Always consult with a healthcare professional for clinical decisions.
+          </p>
+</div>
+<a class="group text-sm font-bold leading-normal tracking-wide flex items-center gap-2 bg-[#0d1b16] dark:bg-primary text-white dark:text-[#0d1b16] px-6 py-3 rounded-lg transition-all hover:opacity-90" href="./Privacy Policy.pdf" target="_blank">
+          Read Full Policy
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Final CTA -->
+<div class="mt-24 text-center pb-20">
+<h2 class="text-2xl font-bold mb-6">Ready to see where you can save?</h2>
+<button onclick="window.location.href='upload.html'" class="inline-flex items-center gap-3 min-w-[200px] cursor-pointer justify-center rounded-xl h-14 px-10 bg-primary text-[#0d1b16] text-lg font-bold shadow-xl transition-all hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined">add_circle</span>
+        Analyze A Bill Now
+      </button>
+</div>
+</main>
+<footer class="border-t border-gray-200 dark:border-gray-800 py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 lg:gap-8">
+<div class="col-span-2 lg:col-span-2 space-y-6">
+<div class="flex items-center gap-2">
+<div class="size-6 bg-primary rounded flex items-center justify-center text-background-dark">
+<span class="material-symbols-outlined text-xs font-bold">account_balance_wallet</span>
+</div>
+<h2 class="text-lg font-extrabold tracking-tight">SaveOnCare</h2>
+</div>
+<p class="text-sm text-gray-500 max-w-xs leading-relaxed">Making healthcare affordable through radical financial transparency and intelligent automation.</p>
+<div class="flex gap-4">
+  <a href="home.html" target="_blank" class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+    <span class="material-symbols-outlined text-sm">public</span>
+  </a>
+
+  <a href="contact.html" class="size-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-primary/20 transition-colors cursor-pointer">
+    <span class="material-symbols-outlined text-sm">alternate_email</span>
+  </a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Product</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="process.html">Bill Auditing</a></li>
+<li><a class="hover:text-primary" href="price.html">Price Intelligence</a></li>
+<li><a class="hover:text-primary" href="talk.html">Negotiation Tools</a></li>
+<li><a class="hover:text-primary" href="demo.html">Demo Simulation</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Company</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="team.html">About Us</a></li>
+<li><a class="hover:text-primary" href="vision.html">Vision</a></li>
+<li><a class="hover:text-primary" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-sm font-extrabold uppercase tracking-widest text-gray-400">Legal</h4>
+<ul class="space-y-2 text-sm font-medium">
+<li><a class="hover:text-primary" href="./Privacy Policy.pdf">Privacy Policy</a></li>
+<li><a class="hover:text-primary" href="./Terms and Condition.pdf">Terms of Service</a></li>
+<li><a class="hover:text-primary" href="./act.pdf">DPDP Act 2023</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-xs text-gray-400 font-medium">© 2026 SaveOnCare Intelligence Platform. All rights reserved.</p>
+<p class="text-xs text-gray-400 font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-[10px]">lock</span> Secured with AES-256 Encryption
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
