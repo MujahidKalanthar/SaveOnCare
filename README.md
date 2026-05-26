@@ -2,7 +2,7 @@
 
 **Transparent & Smart Healthcare Billing Platform**
 
-An AI-powered web platform that helps patients understand complex hospital bills, detect potential overcharges, and discover government scheme benefits — with special focus on Delhi’s MCD hospitals and Ayushman Bharat.
+> An AI-powered web platform that helps patients understand complex hospital bills, detect potential overcharges, and discover government scheme benefits — with special focus on Delhi’s MCD hospitals and Ayushman Bharat.
 
 ---
 
@@ -14,13 +14,13 @@ This project originated as a civic-tech solution for **India Innovates 2026** (M
   **Shortlisted** among 21,000+ teams (Open Innovation Category)
 
 - **Startup Symphony & Udyamitsav’26** – IIT Jammu  
-  **National Finals**
+  ### National Finalists
 
 - **Ideathon** – LNM Institute of Information Technology (LNMIIT), Jaipur  
-  **Finalist**
+  ### National Finalists
 
 - **Beyond the Wall Street** – Narsee Monjee Institute of Management Studies (NMIMS), Hyderabad  
-  **Finalist**
+  ### National Finalists
 
 This repository transforms the original competition pitch into a functional web platform.
 
