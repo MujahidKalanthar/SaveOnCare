@@ -13,7 +13,7 @@ This project originated as a civic-tech solution for **India Innovates 2026** (M
 #### **India Innovates 2026** — Municipal Corporation of Delhi (MCD)
 > Selected among the **top teams from 21,000+ nationwide entries** in the Open Innovation category.
 
-#### **Startup Symphony & Udyamitsav’26** — IIT Jammu
+#### **Startup Symphony (Udyamitsav’26)** — IIT Jammu
 > 🥈 **National Finalists**
 
 #### **Ideathon** — LNMIIT Jaipur
@@ -67,7 +67,7 @@ Healthcare billing transparency is not just a patient convenience issue — it i
 ---
 
 ## 🖥 Live Demo
-**[View Live Project](https://your-vercel-link.vercel.app)**  
+🔗 **View Live Project:** [Click here to view](https://your-vercel-link.vercel.app)
 
 ---
 
@@ -151,7 +151,7 @@ SaveOnCare AI aims to:
 - Praveen Rengarajan – Visuals & Hardware Simulation  
 - Muhammad Shabab Rawoot – Research & Testing  
 
-**MNNIT Allahabad**
+**MNNIT Allahabad | ECE**
 
 ---
 
