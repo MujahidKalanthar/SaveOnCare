@@ -10,19 +10,17 @@
 
 This project originated as a civic-tech solution for **India Innovates 2026** (Municipal Corporation of Delhi) and has been recognized at multiple national-level competitions:
 
-- **India Innovates 2026** – Municipal Corporation of Delhi (MCD)  
-  **Shortlisted** among 21,000+ teams (Open Innovation Category)
+#### **India Innovates 2026** — Municipal Corporation of Delhi (MCD)
+> Selected among the **top teams from 21,000+ nationwide entries** in the Open Innovation category.
 
-- **Startup Symphony & Udyamitsav’26** – IIT Jammu  
-  ### National Finalists
+#### **Startup Symphony & Udyamitsav’26** — IIT Jammu
+> 🥈 **National Finalists**
 
-- **Ideathon** – LNM Institute of Information Technology (LNMIIT), Jaipur  
-  ### National Finalists
+#### **Ideathon** — LNMIIT Jaipur
+> 🥈 **National Finalists**
 
-- **Beyond the Wall Street** – Narsee Monjee Institute of Management Studies (NMIMS), Hyderabad  
-  ### National Finalists
-
-This repository transforms the original competition pitch into a functional web platform.
+#### **Beyond the Wall Street** — NMIMS Hyderabad
+> 🥈 **National Finalists**
 
 ---
 
@@ -69,7 +67,7 @@ Healthcare billing transparency is not just a patient convenience issue — it i
 ---
 
 ## 🖥 Live Demo
-**[View Live Project →](https://your-vercel-link.vercel.app)**   ← Replace with actual link
+**[View Live Project](https://your-vercel-link.vercel.app)**  
 
 ---
 
@@ -149,11 +147,11 @@ SaveOnCare AI aims to:
 
 ## 👨‍💻 Team - VoltEdge
 
-- **Mujahid Kalanthar** – Project Lead & Development  
-- Praveen – Visuals & Hardware Simulation  
-- Muhammad – Research & Testing  
+- Mujahid Kalanthar – Project Lead & Development  
+- Praveen Rengarajan – Visuals & Hardware Simulation  
+- Muhammad Shabab Rawoot – Research & Testing  
 
-**MNNIT Allahabad | ECE 2nd Year**
+**MNNIT Allahabad**
 
 ---
 
